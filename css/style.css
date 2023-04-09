@@ -1,92 +1,195 @@
 .inline-block {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  nav {
-    display: flex;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav li a {
-    text-decoration: none;
-  }
-  
-  ul {
-    width: 50%;
-    margin-left: auto;
-    text-align: right;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Styling for the nav section */
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+ul {
+  width: 50%;
+  margin-left: auto;
+  text-align: right;
 }
 
 .heroImg {
-    height: 600px;
-    padding: 25px;
+  height: 600px;
+  padding: 25px;
+}
+
+.content {
+  width: 500px;
+  margin: 0 auto;
+}
+
+
+/* Styling for the skills section */
+.mySkills {
+  padding: 4rem;
+  background-color: #f7f7f7;
+}
+
+.mySkills h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mySkills div {
+  flex-basis: calc(33.33% - 2rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mySkills img {
+  max-width: 50%;
+  height: auto;
+}
+
+.mySkills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mySkills p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Styling for the work section */
+.myWork {
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.myWork h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+}
+
+.workGrid div {
+  position: relative;
+}
+
+.workGrid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.workGrid h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.workGrid p {
+  font-size: 1.2rem;
+  line-height: auto
+}
+
+/* Styling for the footer section */
+footer {
+  background-color: #373738;
+  padding: 20px;
+}
+
+footer ul {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+footer .icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+footer .icon-list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer .icon-list li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px; 
+  line-height: 50px; 
+  border-radius: 50%; 
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  font-size: 24px;
+}
+
+footer .icon-list li a:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 600px) {
+  /* flex container */
+  .flexcontainer {
+    flex-direction: column;
   }
-  
-  .content {
-    width: 500px;
-    margin: 0 auto;
+
+  /* flex children */
+  .flex-item {
+    width: 100%;
   }
-  
-  footer {
-    background-color: #373738;
-    padding: 20px;
+
+  /* grid container */
+  .workGrid {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
   }
-  
-  footer ul {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0;
-  }
-  
-  footer li {
-    display: inline-block;
-    padding: 0 10px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  footer .icon-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  footer .icon-list li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  footer .icon-list li a {
-    display: inline-block;
-    width: 50px;
-    height: 50px; 
-    line-height: 50px; 
-    border-radius: 50%; 
-    text-align: center;
-    color: #fff;
-    background-color: #000;
-    font-size: 24px;
-  }
-  
-  footer .icon-list li a:hover {
-    background-color: #555;
-  }
+}
