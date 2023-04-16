@@ -3,31 +3,56 @@
     <head>
       <link rel="stylesheet" href="css\style.css">
         <title></title>
-    </head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function() {
+            $('.has-submenu').hover(function() {
+              $(this).find('.submenu').stop().slideDown(200);
+            }, function() {
+              $(this).find('.submenu').stop().slideUp(200);
+            });
+          });
+        </script>
+        
+      </head>
     <body>
 
-<header class="navigation">
-    <div class="inline-block Logo">
-      <img src=".\images\fullnamelogo.png" alt="logo" width="600" height="auto">
-      </div>
-    <nav>
-        <ul>
-          <li><a href="#">about me</a></li>
-          <li><a href="#">projects</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">resume</a></li>
-        </ul>
-      </nav>
-</header>
+      <header class="navigation">
+        <div class="inline-block Logo">
+          <img src=".\images\fullnamelogo.png" alt="logo" width="600" height="auto">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li class="has-submenu">
+              <a href="#">Projects</a>
+              <ul class="submenu">
+                <li><a href="#VibeCheck">VibeCheck</a></li>
+                <li><a href="#Cycler">Cycler</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+  
 
 <section class="heroImg">
-    <div class="content">
-      <img src=".\images\headshot.png" alt="headshot" width="600" height="auto">
-      <p>Hey! I'm Jess. I'm a Registered Nurse turned UX Designer.</p>
-      <p>Why make that distinction? Well, by integrating my expertise in patient-centered care and evidence-based practice, I am able to craft user-centered digital solutions that promote health equity and optimize user experiences. </p>
-      <button>Let's Talk</button>
+  <div class="content">
+    <div class="flex-container">
+      <div class="image-container">
+        <img src="./images/headshot.png" alt="headshot" width="600" height="auto">
+      </div>
+      <div class="text-container">
+        <p>Hey! I'm Jess. I'm a Registered Nurse turned UX Designer.</p>
+        <p>Why make that distinction? Well, by integrating my expertise in patient-centered care and evidence-based practice, I am able to craft user-centered digital solutions that promotes health equity and optimizes user experiences. </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+ 
+  <br>
  
   <section class="mySkills">
     <h1>My UX Skills</h1>
@@ -53,26 +78,34 @@
   <section class="myWork">
     <h1>My Work</h1>
     <div class="workGrid">
+      
+    
       <div>
-        <img src=".\images\vibecheck.png" alt="Project 1">
+        <img src=".\images\vibecheck.png" alt="Project 1" id="VibeCheck">
       </div>
       <div>
         <h4>VibeCheck</h4>
         <p>A travel app that helps users make travel decisions that are safe and inclusive and allows users to build a travel community based on trust and inclusivity.</p>
         <button>View Project</button>
       </div>
+    
+ 
       <div>
-        <img src=".\images\cycler.png" alt="Project 2">
+        <img src=".\images\cycler.png" alt="Project 2" id="Cycler">
       </div>
       <div>
         <h4>Cycler</h4>
         <p>An app for cyclists designed to keep users safe by using real-time crowdsourced route information, route customization, and hands-free navigation.</p>
         <button>View Project</button>
       </div>
+   
+    
     </div>
+    
     <h3>view all projects</h3>
   </section>
-  
+
+
   <footer>
     <ul class="icon-list"></ul>
       <li><a href="mailto:jntaylordesigns@gmail.com?subject=Subject&body=Body">
