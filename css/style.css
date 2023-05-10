@@ -10,41 +10,99 @@ header {
   padding: 10px;
 }
 
-/* Styling for the nav section */
-
-nav {
-  display: flex;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
+
+button {
+  border-radius: 150px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3); 
+  padding: 12px 24px; 
+  font-family: 'Montserrat', sans-serif; 
+  color: #ffffff; 
+  background-color: #7c5cfd; 
+  border: none; 
+}
+
+/* Styling for the nav section */
 
 nav ul {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: 'montserrat', sans-serif;
+  font-size: 18px;
+  color: #000000;
 }
 
 nav li {
-  margin: 0 10px;
+  position: relative;
 }
 
 nav li a {
+  display: block;
+  padding: 10px;
   text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
 }
 
-ul {
-  width: 50%;
-  margin-left: auto;
-  text-align: right;
+nav li:hover > a {
+  color: rgb(96, 255, 202);
 }
 
-.heroImg {
-  height: 600px;
-  padding: 25px;
+nav .has-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #7c5cfd;
+  min-width: 150px;
+  z-index: 1;
 }
+
+nav .has-submenu .submenu li {
+  display: block;
+}
+
+nav .has-submenu .submenu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+nav .has-submenu .submenu li:hover > a {
+  background-color: #7c5cfd;
+  color: rgb(96, 255, 202);
+}
+
 
 .content {
-  width: 500px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  margin-left: 20px;
+  max-width: 50%;
 }
 
 
@@ -89,6 +147,7 @@ ul {
 /* Styling for the work section */
 .myWork {
   padding: 4rem;
+  padding-top: 50px;
   background-color: #fff;
 }
 
@@ -140,7 +199,7 @@ ul {
 
 /* Styling for the footer section */
 footer {
-  background-color: #373738;
+  background-color: #73ffd5;
   padding: 20px;
 }
 
@@ -149,6 +208,7 @@ footer .icon-list {
   padding: 0;
   margin: 0;
   text-align: center;
+  float: right;
 }
 
 footer .icon-list li {
